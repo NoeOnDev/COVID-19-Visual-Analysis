@@ -8,17 +8,20 @@
     "start:dev": "node --watch index.js",
     "start": "node index.js"
   },
-  "keywords": [ 
+  "keywords": [
     "task",
-    "pro", 
-    "remaster", 
-    "project", 
-    "github", 
+    "pro",
+    "remaster",
+    "project",
+    "github",
     "node",
     "express",
     "postgres",
     "sequelize"
   ],
   "author": "NoeOnDev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
