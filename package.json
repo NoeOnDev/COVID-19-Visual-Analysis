@@ -1,0 +1,24 @@
+{
+  "name": "task-pro",
+  "version": "1.0.0",
+  "description": "remaster project for task pro lite",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "keywords": [ 
+    "task",
+    "pro", 
+    "remaster", 
+    "project", 
+    "github", 
+    "node",
+    "express",
+    "postgres",
+    "sequelize"
+  ],
+  "author": "NoeOnDev",
+  "license": "ISC"
+}
