@@ -32,6 +32,11 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    role: {
+        type: DataTypes.ENUM('admin', 'moderator', 'user'),
+        allowNull: false,
+        defaultValue: 'user',
+    }
 }, {
     sequelize,
     modelName: 'User',
@@ -45,6 +50,12 @@ User.init({
             const salt = await bcrypt.genSalt(Rounds);
             const hash = await bcrypt.hash(user.password, salt);
             user.password = hash;
+
+            const userCount = await User.count();
+
+            if (userCount === 0) {
+                user.role = 'admin';
+            }
         }
     }
 });
