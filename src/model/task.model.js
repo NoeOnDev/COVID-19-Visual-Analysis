@@ -17,6 +17,16 @@ Task.init({
         type: DataTypes.STRING,
         allowNull: true,
     },
+    timeSpent: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+    },
+    status: {
+        type: DataTypes.ENUM('pending', 'started', 'completed'),
+        allowNull: false,
+        defaultValue: 'pending',
+    },
     done: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
