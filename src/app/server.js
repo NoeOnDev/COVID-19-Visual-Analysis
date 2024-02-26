@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import { sequelize } from '../database/db.config.js';
+import '../model/association.model.js';
 
 export async function server(){
     try {
