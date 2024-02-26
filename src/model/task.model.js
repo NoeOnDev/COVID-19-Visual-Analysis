@@ -32,6 +32,14 @@ Task.init({
         allowNull: false,
         defaultValue: false,
     },
+    userId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'users',
+            key: 'id'
+        },
+        allowNull: false,
+    }
 }, {
     sequelize,
     modelName: 'Task',
