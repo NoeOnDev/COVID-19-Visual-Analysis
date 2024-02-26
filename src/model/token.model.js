@@ -13,6 +13,10 @@ Token.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    expiresAt: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
     userId: {
         type: DataTypes.INTEGER,
         references: {

@@ -36,7 +36,12 @@ User.init({
         type: DataTypes.ENUM('admin', 'moderator', 'user'),
         allowNull: false,
         defaultValue: 'user',
-    }
+    },
+    verified: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+    },
 }, {
     sequelize,
     modelName: 'User',
