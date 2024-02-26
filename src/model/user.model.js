@@ -1,4 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
+import bcrypt from 'bcrypt';
 import { sequelize } from '../database/db.config.js';
 
 export class User extends Model {}
@@ -38,5 +39,12 @@ User.init({
     paranoid: true,
     timestamps: true,
     underscored: true,
-    hooks: {}
+    hooks: {
+        beforeCreate: async (user) => {
+            const Rounds = 10;
+            const salt = await bcrypt.genSalt(Rounds);
+            const hash = await bcrypt.hash(user.password, salt);
+            user.password = hash;
+        }
+    }
 });
