@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import { sequelize } from '../database/db.config.js';
-import userRoutes from '../routes/user.routes.js';
+import indexRouter from '../routes/index.routes.js';
 import '../model/association.model.js';
 
 export async function server(){
@@ -16,7 +16,7 @@ export async function server(){
         app.use(cors());
         app.use(express.json());
         app.use(morgan('dev'));
-        app.use(userRoutes);
+        app.use(indexRouter);
         app.listen(PORT);
     } catch (error) {
         console.error(`Failed to start server: ${error}`);

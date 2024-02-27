@@ -12,11 +12,12 @@ export class UserService {
         expirationDate.setHours(expirationDate.getHours() + 1);
 
         await Token.create({ userId: user.id, token: verificationToken, expiresAt: expirationDate });
+
         await transporter.sendMail({
             from: 'noeon@gmail.com',
             to: user.email,
             subject: 'Account Verification',
-            html: `Click <a href="http://localhost:9020/verify/${verificationToken}">here</a> to verify your account.`,
+            html: `Click <a href="http://localhost:9020/user/verify/${verificationToken}">here</a> to verify your account.`,
         });
 
         return user;
