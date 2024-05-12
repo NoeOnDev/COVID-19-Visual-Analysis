@@ -11,7 +11,7 @@
 
 # Elabora los siguientes gráficos en su formato vertical y horizontal
 
-# 4. Elabora un gráfico de barras adyacentes que muestre por cada país
+# 6. Elabora un gráfico de barras adyacentes que muestre por cada país
 # las muertes indicando el total de cada año., incluyendo los 10 países.
 
 import pandas as pd

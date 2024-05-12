@@ -11,7 +11,7 @@
 
 # Elabora los siguientes gráficos en su formato vertical y horizontal
 
-# 4. Elabora un gráfico de barras adyacentes que muestre el comparativo
+# 5. Elabora un gráfico de barras adyacentes que muestre el comparativo
 # por año de las infecciones de los países, incluyendo los 10 países.
 
 import pandas as pd

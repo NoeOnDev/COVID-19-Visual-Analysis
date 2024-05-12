@@ -17,48 +17,48 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-datos = pd.read_csv('all-global-countrys.csv')
+data = pd.read_csv('all-global-countrys.csv')
 
-paises = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
+countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
 
-totales_infecciones = []
-totales_muertes = []
+total_infections = []
+total_deaths = []
 
-for pais in paises:
-    datos_pais = datos[datos['Country'] == pais]
-    total_infecciones = datos_pais['New_cases'].sum()
-    total_muertes = datos_pais['New_deaths'].sum()
-    totales_infecciones.append(total_infecciones)
-    totales_muertes.append(total_muertes)
+for country in countries:
+    country_data = data[data['Country'] == country]
+    infections = country_data['New_cases'].sum()
+    deaths = country_data['New_deaths'].sum()
+    total_infections.append(infections)
+    total_deaths.append(deaths)
 
-# Gráfico vertical
-x = range(len(paises))
+# Vertical graph
+x = range(len(countries))
 
 plt.figure(figsize=(12, 6))
 
-plt.bar(x, totales_infecciones, width=0.4, label='Infecciones', color='b', align='center')
-plt.bar(x, totales_muertes, width=0.4, label='Muertes', color='r', align='edge')
+plt.bar(x, total_infections, width=0.4, label='Infecciones', color='b', align='center')
+plt.bar(x, total_deaths, width=0.4, label='Muertes', color='r', align='edge')
 
 plt.xlabel('País')
 plt.ylabel('Total')
 plt.title('Total de infecciones y muertes por COVID por país (Vertical)')
-plt.xticks(x, paises, rotation=90)
+plt.xticks(x, countries, rotation=90)
 plt.legend()
 plt.tight_layout()
 plt.show()
 
-# Gráfico horizontal
-y = range(len(paises))
+# Horizontal graph
+y = range(len(countries))
 
 plt.figure(figsize=(12, 6))
 
-plt.barh(y, totales_infecciones, height=0.4, label='Infecciones', color='b', align='edge')
-plt.barh(y, totales_muertes, height=0.4, label='Muertes', color='r', align='center')
+plt.barh(y, total_infections, height=0.4, label='Infecciones', color='b', align='edge')
+plt.barh(y, total_deaths, height=0.4, label='Muertes', color='r', align='center')
 
 plt.ylabel('País')
 plt.xlabel('Total')
 plt.title('Total de infecciones y muertes por COVID por país (Horizontal)')
-plt.yticks(y, paises)
+plt.yticks(y, countries)
 plt.legend()
 plt.tight_layout()
 plt.show()

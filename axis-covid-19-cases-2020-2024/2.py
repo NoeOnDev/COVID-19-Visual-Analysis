@@ -16,18 +16,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-datos = pd.read_csv('all-global-countrys.csv', parse_dates=['Date_reported'], index_col='Date_reported')
+data = pd.read_csv('all-global-countrys.csv', parse_dates=['Date_reported'], index_col='Date_reported')
 
-paises = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
+countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
 
 plt.figure(figsize=(12, 6))
 
-for pais in paises:
-    datos_pais = datos[datos['Country'] == pais]
-    casos_acumulados = datos_pais['New_cases'].cumsum()
-    muertes_acumuladas = datos_pais['New_deaths'].cumsum()
-    plt.plot(casos_acumulados.index, casos_acumulados, label=f'Casos acumulados en {pais}')
-    plt.plot(muertes_acumuladas.index, muertes_acumuladas, label=f'Muertes acumuladas en {pais}')
+for country in countries:
+    country_data = data[data['Country'] == country]
+    accumulated_cases = country_data['New_cases'].cumsum()
+    accumulated_deaths = country_data['New_deaths'].cumsum()
+    plt.plot(accumulated_cases.index, accumulated_cases, label=f'Casos acumulados en {country}')
+    plt.plot(accumulated_deaths.index, accumulated_deaths, label=f'Muertes acumuladas en {country}')
 
 # plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(800000))
 
