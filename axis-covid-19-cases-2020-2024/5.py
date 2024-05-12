@@ -11,11 +11,12 @@
 
 # Elabora los siguientes gráficos en su formato vertical y horizontal
 
-# 4. Elabora un gráfico apilado que muestre  el acumulado de infectados 
-# por año del total de infectados, incluyendo los 10 países.
+# 4. Elabora un gráfico de barras adyacentes que muestre el comparativo
+# por año de las infecciones de los países, incluyendo los 10 países.
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 datos = pd.read_csv('all-global-countrys.csv')
 
@@ -35,22 +36,22 @@ for pais in paises:
 totales_por_año = totales_por_año.T
 
 # Gráfico vertical
-totales_por_año.plot(kind='bar', stacked=True, figsize=(12, 6))
+totales_por_año.plot(kind='bar', figsize=(12, 6))
 
 plt.xlabel('País')
 plt.ylabel('Total de infecciones')
-plt.title('Total acumulado de infecciones por COVID por año y país (Vertical)')
+plt.title('Comparativo por año de las infecciones de los países (Vertical)')
 plt.xticks(rotation=90)
 plt.legend(title='Año')
 plt.tight_layout()
 plt.show()
 
 # Gráfico horizontal
-totales_por_año.plot(kind='barh', stacked=True, figsize=(12, 6))
+totales_por_año.plot(kind='barh', figsize=(12, 6))
 
 plt.ylabel('País')
 plt.xlabel('Total de infecciones')
-plt.title('Total acumulado de infecciones por COVID por año y país (Horizontal)')
+plt.title('Comparativo por año de las infecciones de los países (Horizontal)')
 plt.legend(title='Año')
 plt.tight_layout()
 plt.show()
