@@ -1,14 +1,3 @@
-# Argentina
-# Brazil
-# Canada
-# El Salvador
-# Ecuador
-# Mexico
-# Venezuela
-# Peru
-# Russian Federation
-# Zimbabwe
-
 # 1. Elabora una gráfica de líneas que muestre el comportamiento del crecimiento
 # de nuevos casos con respecto al numero de defunciones a lo largo de tiempo incluyendo los 10 países.
 

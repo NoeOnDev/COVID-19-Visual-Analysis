@@ -1,14 +1,3 @@
-# Argentina
-# Brazil
-# Canada
-# El Salvador
-# Ecuador
-# Mexico
-# Venezuela
-# Peru
-# Russian Federation
-# Zimbabwe
-
 # 2. Elabora una gráfica de líneas que muestre  en crecimiento acumulativo 
 # de infecciones y muertes de covid incluyendo los 10 países.
 

@@ -1,14 +1,3 @@
-# Argentina
-# Brazil
-# Canada
-# El Salvador
-# Ecuador
-# Mexico
-# Venezuela
-# Peru
-# Russian Federation
-# Zimbabwe
-
 # Elabora los siguientes gráficos en su formato vertical y horizontal
 
 # 5. Elabora un gráfico de barras adyacentes que muestre el comparativo

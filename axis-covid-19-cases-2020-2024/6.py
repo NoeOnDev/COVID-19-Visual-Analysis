@@ -1,18 +1,7 @@
-# Argentina
-# Brazil
-# Canada
-# El Salvador
-# Ecuador
-# Mexico
-# Venezuela
-# Peru
-# Russian Federation
-# Zimbabwe
-
 # Elabora los siguientes gráficos en su formato vertical y horizontal
 
 # 6. Elabora un gráfico de barras adyacentes que muestre por cada país
-# las muertes indicando el total de cada año., incluyendo los 10 países.
+# las muertes indicando el total de cada año, incluyendo los 10 países.
 
 import pandas as pd
 import matplotlib.pyplot as plt

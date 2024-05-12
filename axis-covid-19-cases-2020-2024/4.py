@@ -1,14 +1,3 @@
-# Argentina
-# Brazil
-# Canada
-# El Salvador
-# Ecuador
-# Mexico
-# Venezuela
-# Peru
-# Russian Federation
-# Zimbabwe
-
 # Elabora los siguientes gráficos en su formato vertical y horizontal
 
 # 4. Elabora un gráfico apilado que muestre  el acumulado de infectados 
