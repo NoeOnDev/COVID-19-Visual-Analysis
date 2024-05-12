@@ -5,10 +5,9 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from config import countries
 
 data = pd.read_csv('all-global-countrys.csv')
-
-countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela (Bolivarian Republic of)', 'Peru', 'Russian Federation', 'Zimbabwe']
 
 data['Date_reported'] = pd.to_datetime(data['Date_reported'])
 

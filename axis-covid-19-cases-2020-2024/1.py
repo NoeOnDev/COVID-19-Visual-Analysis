@@ -4,10 +4,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+from config import countries
 
 data = pd.read_csv('all-global-countrys.csv', parse_dates=['Date_reported'], index_col='Date_reported')
-
-countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela (Bolivarian Republic of)', 'Peru', 'Russian Federation', 'Zimbabwe']
 
 plt.figure(figsize=(12, 6))
 
