@@ -16,27 +16,26 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 
-datos = pd.read_csv('all-global-countrys.csv')
+data = pd.read_csv('all-global-countrys.csv')
 
-paises = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
+countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
 
-datos['Date_reported'] = pd.to_datetime(datos['Date_reported'])
+data['Date_reported'] = pd.to_datetime(data['Date_reported'])
 
-datos['Year'] = datos['Date_reported'].dt.year
+data['Year'] = data['Date_reported'].dt.year
 
-totales_por_año = pd.DataFrame()
+totals_by_year = pd.DataFrame()
 
-for pais in paises:
-    datos_pais = datos[datos['Country'] == pais]
-    totales_pais = datos_pais.groupby('Year')['New_cases'].sum()
-    totales_por_año[pais] = totales_pais
+for country in countries:
+    country_data = data[data['Country'] == country]
+    country_totals = country_data.groupby('Year')['New_cases'].sum()
+    totals_by_year[country] = country_totals
 
-totales_por_año = totales_por_año.T
+totals_by_year = totals_by_year.T
 
-# Gráfico vertical
-totales_por_año.plot(kind='bar', figsize=(12, 6))
+# Vertical graph
+totals_by_year.plot(kind='bar', figsize=(12, 6))
 
 plt.xlabel('País')
 plt.ylabel('Total de infecciones')
@@ -46,8 +45,8 @@ plt.legend(title='Año')
 plt.tight_layout()
 plt.show()
 
-# Gráfico horizontal
-totales_por_año.plot(kind='barh', figsize=(12, 6))
+# Horizontal graph
+totals_by_year.plot(kind='barh', figsize=(12, 6))
 
 plt.ylabel('País')
 plt.xlabel('Total de infecciones')
