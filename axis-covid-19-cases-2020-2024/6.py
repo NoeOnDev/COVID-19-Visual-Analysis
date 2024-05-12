@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv('all-global-countrys.csv')
 
-countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
+countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela (Bolivarian Republic of)', 'Peru', 'Russian Federation', 'Zimbabwe']
 
 data['Date_reported'] = pd.to_datetime(data['Date_reported'])
 

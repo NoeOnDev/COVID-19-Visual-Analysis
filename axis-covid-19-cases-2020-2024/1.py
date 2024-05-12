@@ -18,7 +18,7 @@ import matplotlib.ticker as ticker
 
 data = pd.read_csv('all-global-countrys.csv', parse_dates=['Date_reported'], index_col='Date_reported')
 
-countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela', 'Peru', 'Russian Federation', 'Zimbabwe']
+countries = ['Argentina', 'Brazil', 'Canada', 'El Salvador', 'Ecuador', 'Mexico', 'Venezuela (Bolivarian Republic of)', 'Peru', 'Russian Federation', 'Zimbabwe']
 
 plt.figure(figsize=(12, 6))
 
