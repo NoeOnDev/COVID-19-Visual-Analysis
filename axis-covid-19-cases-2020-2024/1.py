@@ -14,6 +14,7 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 
 datos = pd.read_csv('all-global-countrys.csv', parse_dates=['Date_reported'], index_col='Date_reported')
 
@@ -25,6 +26,9 @@ for pais in paises:
     datos_pais = datos[datos['Country'] == pais]
     plt.plot(datos_pais.index, datos_pais['New_cases'], label=f'Nuevos casos en {pais}')
     plt.plot(datos_pais.index, datos_pais['New_deaths'], label=f'Nuevas muertes en {pais}')
+
+plt.gca().get_yaxis().get_major_formatter().set_scientific(False)
+plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(50000))
 
 plt.xlabel('Fecha')
 plt.ylabel('Número de casos/muertes')
